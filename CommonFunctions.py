@@ -46,7 +46,7 @@ def convert_equation_to_meshgrid(x_var, y_var, equation, x_0, x_k, y_0, y_k, ste
 
 def plot_direction_field(x_var, y_var, equation, params, axes, title=True):
     meshgrid = convert_equation_to_meshgrid(x_var, y_var, equation, *params)
-    axes.quiver(*meshgrid)
+    axes.quiver(*meshgrid, pivot='mid')
     axes.grid()
     diff_func_latex = r'\frac{dy}{dx}'
     if title:
